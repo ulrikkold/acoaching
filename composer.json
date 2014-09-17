@@ -1,0 +1,15 @@
+{
+    "name": "ulrikkold/acoaching",
+    "description": "The website of the coaching company Aninguaq Coaching.",
+    "require": {
+        "typo3/neos": "*"
+    },
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Ulrik Høyer Kold",
+            "email": "kontakt@ulrikkold.dk"
+        }
+    ],
+    "minimum-stability": "stable"
+}
