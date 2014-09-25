@@ -1,15 +1,37 @@
 {
-    "name": "ulrikkold/acoaching",
-    "description": "The website of the coaching company Aninguaq Coaching.",
-    "require": {
-        "typo3/neos": "*"
+  "name": "ulrikkold/acoaching",
+  "description": "The website of the coaching company Aninguaq Coaching.",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Ulrik Høyer Kold",
+      "email": "kontakt@ulrikkold.dk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "config": {
+    "vendor-dir": "Packages/Libraries",
+    "bin-dir": "bin"
+  },
+  "require": {
+    "typo3/neos": "1.1.x",
+    "typo3/neos-base-distribution": "~1.1",
+    "ulrikkold/AninguaqCoachingDk": "*@dev"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:ulrikkold/aninguaqcoachingdk.git"
     },
-    "license": "GPL-3.0+",
-    "authors": [
-        {
-            "name": "Ulrik Høyer Kold",
-            "email": "kontakt@ulrikkold.dk"
-        }
-    ],
-    "minimum-stability": "stable"
+    {
+      "type": "vcs",
+      "url": "git@github.com:ulrikkold/acoaching.git"
+    }
+  ],
+  "scripts": {
+    "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+    "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+    "post-package-update": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+    "post-package-install": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+  }
 }
